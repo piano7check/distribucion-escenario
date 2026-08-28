@@ -2,6 +2,7 @@
   "name": "distribucion-escenario",
   "private": true,
   "version": "0.0.0",
+  "author": "Ing. Gustavo Rojas Valdivia",
   "type": "module",
   "scripts": {
     "dev": "vite",

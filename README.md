@@ -40,3 +40,7 @@ listado de `Componentes.pdf`.
 - **Backend (Supabase)**: no requiere servidor propio — Supabase provee la
   base de datos, autenticación y sincronización en tiempo real directamente
   desde el frontend.
+
+## Autor
+
+Ing. Gustavo Rojas Valdivia
