@@ -1,0 +1,230 @@
+.slot-editor__backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 10, 15, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  padding: 1rem;
+}
+
+.slot-editor {
+  width: 100%;
+  max-width: 26rem;
+  max-height: min(32rem, 85vh);
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 0.9rem;
+  padding: 1rem 1.1rem 1.1rem;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+}
+
+.slot-editor__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.slot-editor__header h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.slot-editor__subtitle {
+  margin: 0.15rem 0 0;
+  font-size: 0.82rem;
+  color: var(--text-muted-color);
+}
+
+.slot-editor__close {
+  border: none;
+  background: transparent;
+  color: var(--text-muted-color);
+  font-size: 1.1rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0.2rem;
+}
+
+.slot-editor__close:hover {
+  color: var(--text-color);
+}
+
+.slot-editor__current {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.6rem 0.7rem;
+  border-radius: 0.6rem;
+  background: var(--surface-hover-color);
+}
+
+.slot-editor__current-num {
+  font-size: 1rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--accent-color);
+  min-width: 2.6rem;
+}
+
+.slot-editor__current-info {
+  min-width: 0;
+}
+
+.slot-editor__current-name {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-color);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.slot-editor__current-meta {
+  margin: 0.1rem 0 0;
+  font-size: 0.78rem;
+  color: var(--text-muted-color);
+}
+
+.slot-editor__vacant {
+  margin: 0;
+  padding: 0.6rem 0.7rem;
+  border-radius: 0.6rem;
+  background: var(--surface-hover-color);
+  color: var(--text-muted-color);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.slot-editor__search {
+  width: 100%;
+  padding: 0.5rem 0.7rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-size: 0.9rem;
+}
+
+.slot-editor__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  padding: 0.4rem 0;
+}
+
+.slot-editor__empty {
+  padding: 0.6rem;
+  color: var(--text-muted-color);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.slot-editor__candidate {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.55rem;
+  border-radius: 0.5rem;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: 0.85rem;
+  text-align: left;
+}
+
+.slot-editor__candidate:hover {
+  background: var(--surface-hover-color);
+}
+
+.slot-editor__candidate--current {
+  border-color: var(--accent-color);
+  background: var(--surface-hover-color);
+}
+
+.slot-editor__candidate-num {
+  font-variant-numeric: tabular-nums;
+  color: var(--text-muted-color);
+  min-width: 2rem;
+}
+
+.slot-editor__candidate-name {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.slot-editor__candidate-voice {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted-color);
+}
+
+.slot-editor__badge {
+  font-size: 0.68rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 999px;
+  background: var(--border-color);
+  color: var(--text-muted-color);
+  white-space: nowrap;
+}
+
+.slot-editor__badge--current {
+  background: var(--accent-color);
+  color: #ffffff;
+}
+
+.slot-editor__actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.slot-editor__action {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+
+.slot-editor__action:hover:not(:disabled) {
+  background: var(--surface-hover-color);
+}
+
+.slot-editor__action:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.slot-editor__remove {
+  width: 100%;
+  padding: 0.4rem;
+  border-radius: 0.5rem;
+  border: 1px dashed #e53e3e;
+  background: transparent;
+  color: #e53e3e;
+  font-size: 0.76rem;
+  cursor: pointer;
+}
+
+.slot-editor__remove:hover {
+  background: rgba(229, 62, 62, 0.1);
+}

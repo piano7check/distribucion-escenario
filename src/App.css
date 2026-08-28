@@ -1,0 +1,171 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.25rem 1.5rem 1.5rem;
+  box-sizing: border-box;
+}
+
+@media (min-width: 900px) {
+  .app {
+    max-width: min(2100px, 97vw);
+    padding: 0.9rem 1.75rem 1.1rem;
+  }
+
+  .app__header h1 {
+    font-size: 1.3rem;
+  }
+
+  .app__header {
+    margin-bottom: 0.4rem;
+  }
+
+  .app__tabs {
+    margin-bottom: 0.6rem;
+  }
+
+  .app__panel-title {
+    font-size: 0.95rem;
+  }
+}
+
+.app__header {
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+.app__header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  letter-spacing: 0.02em;
+}
+
+.app__header p {
+  margin: 0.15rem 0 0;
+  color: var(--text-muted-color);
+  font-size: 0.95rem;
+}
+
+.app__tabs {
+  display: flex;
+  gap: 0.4rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.app__tab {
+  padding: 0.55rem 1.25rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  background: var(--surface-color);
+  color: var(--text-color);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.app__tab:hover {
+  background: var(--surface-hover-color);
+}
+
+.app__tab--active {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: #ffffff;
+}
+
+.app__edit-bar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+  font-size: 0.85rem;
+}
+
+.app__edit-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--text-color);
+  cursor: pointer;
+  user-select: none;
+}
+
+.app__stats {
+  color: var(--text-muted-color);
+  font-variant-numeric: tabular-nums;
+}
+
+.app__user {
+  color: var(--text-muted-color);
+  font-size: 0.8rem;
+}
+
+.app__signin,
+.app__signout {
+  padding: 0.35rem 0.7rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+  background: var(--surface-color);
+  color: var(--text-color);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.app__signin {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.app__signin:hover,
+.app__signout:hover {
+  background: var(--surface-hover-color);
+}
+
+.app__edit-actions {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.app__edit-actions button {
+  padding: 0.35rem 0.7rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+  background: var(--surface-color);
+  color: var(--text-color);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.app__edit-actions button:hover:not(:disabled) {
+  background: var(--surface-hover-color);
+}
+
+.app__edit-actions button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.app__content {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.app__panel-title {
+  margin: 0;
+  text-align: center;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-color);
+}

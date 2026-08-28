@@ -1,0 +1,23 @@
+.person-circle text {
+  pointer-events: none;
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+}
+
+.person-circle--clickable {
+  cursor: pointer;
+}
+
+.person-circle--clickable circle {
+  transition: transform 0.1s ease, filter 0.1s ease;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.person-circle--clickable:hover circle {
+  filter: brightness(1.12);
+  transform: scale(1.08);
+}
+
+.person-circle--empty:hover circle {
+  filter: none;
+}
